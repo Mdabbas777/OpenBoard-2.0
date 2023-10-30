@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openboard Clone</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img class="pencil" src="./NewIcons/Blue_Pencil.svg" alt="blue_pencil">
+        <img class="eraser" src="./NewIcons/Eraser.svg" alt="eraser">
+        <img class="download" src="./NewIcons/Download.svg" alt="download">
+        <img class="upload" src="./NewIcons/Upload.svg" alt="upload">
+        <img class="stickynote" src="./NewIcons/StickyNote.svg" alt="stickyNote">
+        <img class="redo" src="./NewIcons/Redo.svg" alt="redo">
+        <img class="undo" src="./NewIcons/Undo.svg" alt="undo">
+    </div>
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="0" max="10" value="2" class="pencil-width">
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="blue pencil-color"></div>
+            <div class="red pencil-color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont">
+        <input type="range" min="0" max="30" value="5" class="eraser-width">
+    </div>
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"
+        integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj"
+        crossorigin="anonymous"></script>
+    <script>
+        const socket = io.connect("http://localhost:3000");
+    </script>
+    <script src="/tools.js"></script>
+    <script src="/canvas.js"></script>
+</body>
+</html>

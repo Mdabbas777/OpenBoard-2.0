@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.options-cont{
+    height: 4rem;
+    width: 3.5rem;
+    background-color: rgb(180, 211, 221);
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tools-cont{
+    display: flex;
+    height: 5rem;
+    width: 55vw;
+    background-color: #f1f2f6;
+    justify-content: space-around;
+    position: absolute;
+    top: 2rem;
+    left: 25vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tools-cont > * {
+    display: block;
+    width: 4rem;
+}
+
+.pencil-tool-cont{
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 5rem;
+    width: 7rem;
+    display: none;
+    position: absolute;
+    top: 7rem;
+    left: 25vw;
+    border-radius: 3px;
+}
+
+.pencil-width-cont {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pencil-width-cont input {
+    width: 80%;
+}
+
+.pencil-color-cont {
+    height: calc(100% - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+} 
+
+.pencil-color {
+    width: 1.5rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+} 
+
+.eraser-tool-cont {
+    height: 2rem;
+    width: 5rem;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7rem;
+    left: 34vw; 
+    border-radius: 2px;
+}
+
+.scale-tools{
+    animation: scale-tools;
+    animation-duration: 1s;
+}
+
+@keyframes scale-tools {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.eraser-tool-cont input{
+    width: 80%;
+}
+
+
+/* sticky note */
+
+.sticky-cont{
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 15rem;
+    left: 50rem;
+}
+
+.header-cont {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: #f1f2f6;
+    justify-content: flex-end;
+    border-radius: 3px;
+}
+
+.header-cont > * {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+}
+
+.minimize {
+    background-color: greenyellow;
+    text-align: center;
+    font-size: large;
+    cursor: pointer;
+}
+
+.remove {
+    background-color: rgb(216, 100, 100);
+    text-align: center;
+    font-size: large;       
+    cursor: pointer;
+}
+
+.note-cont {
+    border-radius: 3px;
+    height: calc(100% - 2rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
